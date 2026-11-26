@@ -9,7 +9,6 @@ Le traitement est réalisé dans un notebook Jupyter (`analyse_rms_marche.ipynb`
 ```
 .
 ├── analyse_rms_marche.ipynb   # notebook d'analyse (à exécuter)
-├── requirements.txt           # bibliothèques Python nécessaires
 ├── README.md
 └── data/
     ├── input/                 # fichiers CSV bruts des accéléromètres
@@ -103,18 +102,4 @@ Seule la section *Configuration* est à adapter : noms de fichiers, colonnes, pl
 | `rms_comparaison.csv` | RMS totale par position pour chaque sujet, et rapport prothèse / sain |
 | `rms_comparaison.png` | Graphique comparatif sain / prothèse, un panneau par position |
 
-## Limites et précautions
 
-- La comparaison porte sur **deux sujets différents** : la vitesse de marche, la morphologie et d'autres facteurs individuels influencent la RMS indépendamment de la prothèse.
-- Les positions ont été mesurées à des moments différents de la séance : la comparaison pertinente est celle d'**une même position entre les deux sujets**.
-- Les axes x, y, z du capteur ne correspondent aux directions anatomiques (vertical, antéro-postérieur, médio-latéral) que si l'orientation de la fixation est connue et identique pour les deux sujets.
-- La résolution des capteurs (multiples de 1/64 g) limite la précision sur les faibles amplitudes.
-- La RMS résultante résume l'intensité globale du mouvement mais masque les transferts d'amplitude d'un axe à l'autre : il faut aussi examiner les trois axes.
-
-## Données
-
-Les fichiers d'entrée contiennent des mesures de personnes réelles. Ils sont anonymisés (`sain`, `prothese`) et publiés avec l'accord des sujets. [À vérifier et compléter avant publication.]
-
-## Auteur et licence
-
-[À compléter : nom, établissement ou cours, année, licence.]
